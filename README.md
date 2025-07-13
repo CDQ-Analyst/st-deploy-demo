@@ -92,7 +92,11 @@ docker rmi sulaymanaziz/stapp1:latest
 ```bash
 docker pull sulaymanaziz/stapp1
 ```
+```bash
+docker run -d -p 8501:8501 sulaymanaziz/stapp1 
+```
 
+# if you want to change app.py then nano app.py   do your change then save In short: Ctrl+O, Enter, Ctrl+X
 
 
 
