@@ -1,20 +1,6 @@
-
-
-
-
-
-
-
-
-# FROM python:3.8-slim-buster
-
-EXPOSE 8501
-
-
-
 FROM python:3.8-slim-buster
 
-# Overwrite sources.list with archive URLs and disable date check
+# Use archived Debian repositories and disable date check
 RUN echo "deb http://archive.debian.org/debian buster main" > /etc/apt/sources.list && \
     echo "deb http://archive.debian.org/debian-security buster/updates main" >> /etc/apt/sources.list && \
     echo 'Acquire::Check-Valid-Until "false";' > /etc/apt/apt.conf.d/99no-check-valid-until && \
@@ -25,18 +11,22 @@ RUN echo "deb http://archive.debian.org/debian buster main" > /etc/apt/sources.l
         git && \
     rm -rf /var/lib/apt/lists/*
 
-
-
-
-
-
-
-    
-
+# Copy app files
+COPY . /app
 WORKDIR /app
 
-COPY . /app
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
 
-RUN pip3 install -r requirements.txt
+# Expose Streamlit default port
+EXPOSE 8501
+
+# Run the app
+CMD ["streamlit", "run", "app.py"]
+
+
+
+
+# RUN pip3 install -r requirements.txt
 
 ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
