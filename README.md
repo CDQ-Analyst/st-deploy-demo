@@ -26,7 +26,7 @@ git clone "your-project"
 ```
 
 ```bash
-docker build -t entbappy/stapp:latest . 
+docker build -t sulaymanaziz/stapp1:latest . 
 ```
 
 ```bash
@@ -34,7 +34,7 @@ docker images -a
 ```
 
 ```bash
-docker run -d -p 8501:8501 entbappy/stapp 
+docker run -d -p 8501:8501 sulaymanaziz/stapp1 
 ```
 
 ```bash
@@ -54,15 +54,15 @@ docker login
 ```
 
 ```bash
-docker push entbappy/stapp:latest 
+docker push sulaymanaziz/stapp1:latest 
 ```
 
 ```bash
-docker rmi entbappy/stapp:latest
+docker rmi sulaymanaziz/stapp1:latest
 ```
 
 ```bash
-docker pull entbappy/stapp
+docker pull sulaymanaziz/stapp1
 ```
 
 
