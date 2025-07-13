@@ -30,7 +30,7 @@ git clone "your-project"
 
 ls
 
-cd [name of your instance]/   # cd st-deploy-demo
+cd [name of your instance]/   # cd st-deploy-demo/
 
 ls
 
