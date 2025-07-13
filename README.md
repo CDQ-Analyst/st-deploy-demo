@@ -27,6 +27,14 @@ docker --version
 
 ```bash
 git clone "your-project"
+
+ls
+
+cd [name of your instance]/   # cd st-deploy-demo
+
+ls
+
+
 ```
 
 ```bash
