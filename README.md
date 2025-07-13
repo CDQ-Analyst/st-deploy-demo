@@ -64,6 +64,19 @@ docker rm $(docker ps -a -q)
 ```bash
 docker login 
 ```
+# ubuntu@ip-172-31-83-213:~/st-deploy-demo$ docker login
+
+# USING WEB-BASED LOGIN
+
+# i Info → To sign in with credentials on the command line, use 'docker login -u <username>'
+         
+
+# Your one-time device confirmation code is: VWZP-CQQP
+# Press ENTER to open your browser or submit your device code here: https://login.docker.com/activate
+
+# Waiting for authentication in the browser…
+
+
 
 ```bash
 docker push sulaymanaziz/stapp1:latest 
