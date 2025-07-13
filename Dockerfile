@@ -17,11 +17,12 @@ EXPOSE 8501
 #     && rm -rf /var/lib/apt/lists/*
 
 
+
 FROM python:3.8-slim-buster
 
-# Switch to archived Debian repositories
-RUN sed -i 's|http://deb.debian.org/debian|http://archive.debian.org/debian|g' /etc/apt/sources.list && \
-    sed -i 's|http://security.debian.org/debian-security|http://archive.debian.org/debian-security|g' /etc/apt/sources.list && \
+# Switch to archived Debian repositories and disable date checks
+RUN echo "deb http://archive.debian.org/debian buster main" > /etc/apt/sources.list && \
+    echo "deb http://archive.debian.org/debian-security buster/updates main" >> /etc/apt/sources.list && \
     echo 'Acquire::Check-Valid-Until "false";' > /etc/apt/apt.conf.d/99no-check-valid-until && \
     apt-get update && \
     apt-get install -y \
@@ -29,6 +30,7 @@ RUN sed -i 's|http://deb.debian.org/debian|http://archive.debian.org/debian|g' /
         software-properties-common \
         git && \
     rm -rf /var/lib/apt/lists/*
+
 
 
 
