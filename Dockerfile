@@ -2,11 +2,25 @@ FROM python:3.10-slim-buster
 
 EXPOSE 8501
 
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    software-properties-common \
-    git \
-    && rm -rf /var/lib/apt/lists/*
+# RUN apt-get update && apt-get install -y \
+#     build-essential \
+#     software-properties-common \
+#     git \
+#     && rm -rf /var/lib/apt/lists/*
+
+
+
+RUN sed -i 's|http://deb.debian.org/debian|http://archive.debian.org/debian|g' /etc/apt/sources.list && \
+    sed -i '/security.debian.org/d' /etc/apt/sources.list && \
+    apt-get update && apt-get install -y \
+    build-essential \
+    software-properties-common \
+    git && \
+    rm -rf /var/lib/apt/lists/*
+
+
+
+    
 
 WORKDIR /app
 
