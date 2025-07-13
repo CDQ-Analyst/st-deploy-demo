@@ -1,4 +1,12 @@
-FROM python:3.10-slim-buster
+
+
+
+
+
+
+
+
+FROM python:3.8-slim-buster
 
 EXPOSE 8501
 
@@ -9,14 +17,15 @@ EXPOSE 8501
 #     && rm -rf /var/lib/apt/lists/*
 
 
-
+# Use archived Debian repositories
 RUN sed -i 's|http://deb.debian.org/debian|http://archive.debian.org/debian|g' /etc/apt/sources.list && \
-    sed -i '/security.debian.org/d' /etc/apt/sources.list && \
-    apt-get update && apt-get install -y \
-    build-essential \
-    software-properties-common \
-    git && \
-    rm -rf /var/lib/apt/lists/*
+    sed -i '/security.debian.org/d' /etc/apt/sources.list && \
+    apt-get update && apt-get install -y \
+    build-essential \
+    software-properties-common \
+    git && \
+    rm -rf /var/lib/apt/lists/*
+
 
 
 
