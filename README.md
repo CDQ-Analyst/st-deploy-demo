@@ -48,6 +48,8 @@ docker images -a
 ```bash
 docker run -d -p 8501:8501 sulaymanaziz/stapp1 
 ```
+### then got to EC2 instance copy  Public IPv4 address  paste in the web :8501 to run the streamlit app
+
 
 ```bash
 docker ps  
