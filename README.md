@@ -74,7 +74,8 @@ docker login
 # Your one-time device confirmation code is: VWZP-CQQP
 # Press ENTER to open your browser or submit your device code here: https://login.docker.com/activate
 
-# Waiting for authentication in the browser…
+## Waiting for authentication in the browser…
+## after login sucessfully then proced to push 
 
 
 
