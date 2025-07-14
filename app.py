@@ -1,6 +1,7 @@
 import streamlit as st
 
 
-st.title('Hello Dilare & Nigare  💐🌷🌹🌸🌺')
+st.title('Hello Dilare & Nigare') 
+st.title(💐🌷🌹🌸🌺')
 
-st.write(f'ִ##  ࣪ ˖ ࣪ ᨰꫀᥣᥴ᥆ꩇꫀ ! to the ᰔ ִ ׄ 🌨️ ⛅ ☀️  to the Cloud!')
+st.write("#  ࣪ ˖ ࣪ ᨰꫀᥣᥴ᥆ꩇꫀ ! to the ᰔ ִ ׄ 🌨️ ⛅ ☀️ ")
