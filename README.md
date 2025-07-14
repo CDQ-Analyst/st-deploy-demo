@@ -96,7 +96,22 @@ docker pull sulaymanaziz/stapp1
 docker run -d -p 8501:8501 sulaymanaziz/stapp1 
 ```
 
-# if you want to change app.py then nano app.py   do your change then save In short: Ctrl+O, Enter, Ctrl+X
+### if you want to change app.py then nano app.py   do your change then save In short: Ctrl+O, Enter, Ctrl+X
+### then re build docker image:
+nano app.py 
+### do your change then save In short: Ctrl+O, Enter, Ctrl+X
+docker build -t sulaymanaziz/stapp1:latest .
+
+docker ps
+
+docker stop <CONTAINER_ID_OR_NAME>
+docker rm <CONTAINER_ID_OR_NAME>
+
+docker login 
+
+
+
+
 
 
 
